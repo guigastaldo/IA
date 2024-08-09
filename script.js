@@ -82,7 +82,7 @@ function mostraPergunta() {
         return;
       }
       perguntaAtual = perguntas[atual]
-      caixaperguntas.textContent = perguntaAtual.enunciado;
+      caixaPerguntas.textContent = perguntaAtual.enunciado;
       caixaAlternativas.textContent = "";
       mostraAlternativas();
 }
@@ -105,7 +105,7 @@ function respostaSelecionada(opcaoSelecionada) {
 }
 
 function motraResultado() {
-    caixaperguntas.textContent = "escreva aq";
+    caixaPerguntas.textContent = ".....";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
