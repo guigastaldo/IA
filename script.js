@@ -10,11 +10,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, o ensino religioso no Brasil será mais inclusivo e diversificado.",
-                afirmação: "O ensino religioso no Brasil será mais inclusivo e diversificado.",
+                afirmacao: "O ensino religioso no Brasil será mais inclusivo e diversificado."
             },
             {
                 texto: "Não, o ensino religioso no Brasil permanecerá restrito a poucas religiões.",
-                afirmação: "O ensino religioso no Brasil permanecerá restrito a poucas religiões.",
+                afirmacao: "O ensino religioso no Brasil permanecerá restrito a poucas religiões."
             }
         ]
     },
@@ -23,11 +23,11 @@ const perguntas = [
         alternativas: [
             {
                 texto:  "Sim, as escolas brasileiras integrarão a tecnologia nas aulas de ensino religioso.",
-                afirmação: "As escolas brasileiras integrarão a tecnologia nas aulas de ensino religioso."
+                afirmacao: "As escolas brasileiras integrarão a tecnologia nas aulas de ensino religioso."
             },
             {
                 texto: "Não, as escolas brasileiras não integrarão a tecnologia nas aulas de ensino religioso.",
-                afirmação: "As escolas brasileiras não integrarão a tecnologia nas aulas de ensino religioso."
+                afirmacao: "As escolas brasileiras não integrarão a tecnologia nas aulas de ensino religioso."
             }
         ]
 
@@ -37,11 +37,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, haverá um maior diálogo inter-religioso nas escolas brasileiras",
-                afirmação: "Haverá um maior diálogo inter-religioso nas escolas brasileiras."
+                afirmacao: "Haverá um maior diálogo inter-religioso nas escolas brasileiras."
             },
             {
                 texto: "Não, não haverá um maior diálogo inter-religioso nas escolas brasileiras.",
-                afirmação: "Não haverá um maior diálogo inter-religioso nas escolas brasileiras."
+                afirmacao: "Não haverá um maior diálogo inter-religioso nas escolas brasileiras."
             }
         ]
     },
@@ -50,11 +50,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, o ensino religioso contribuirá para a formação de cidadãos mais tolerantes e respeitosos.",
-                afirmação: "O ensino religioso contribuirá para a formação de cidadãos mais tolerantes e respeitosos."
+                afirmacao: "O ensino religioso contribuirá para a formação de cidadãos mais tolerantes e respeitosos."
             },
             {
                 texto: "Não, o ensino religioso não contribuirá para a formação de cidadãos mais tolerantes e respeitosos.",
-                afirmação: "O ensino religioso não contribuirá para a formação de cidadãos mais tolerantes e respeitosos."
+                afirmacao: "O ensino religioso não contribuirá para a formação de cidadãos mais tolerantes e respeitosos."
             }
         ]
     },
@@ -63,11 +63,11 @@ const perguntas = [
         alternativas: [
             {
                 texto: "Sim, as políticas públicas incentivarão a inclusão do ensino religioso no currículo escolar.",
-                afirmação: "As políticas públicas incentivarão a inclusão do ensino religioso no currículo escolar."
+                afirmacao: "As políticas públicas incentivarão a inclusão do ensino religioso no currículo escolar."
             },
             {
                 texto: "Não, as políticas públicas não incentivarão a inclusão do ensino religioso no currículo escolar.",
-                afirmação: "As políticas públicas não incentivarão a inclusão do ensino religioso no currículo escolar."
+                afirmacao: "As políticas públicas não incentivarão a inclusão do ensino religioso no currículo escolar."
             }
         ]
     },
@@ -77,11 +77,11 @@ let perguntaAtual;
 let historiaFinal = "";
 
 function mostraPergunta() {
-      if (atual >= perguntaAtual.lenght) {
+      if (atual >= perguntas.lenght) {
         mostraResultado();
         return;
       }
-      perguntaAtual = perguntas[atual]
+      perguntaAtual = perguntas[atual];
       caixaPerguntas.textContent = perguntaAtual.enunciado;
       caixaAlternativas.textContent = "";
       mostraAlternativas();
@@ -98,14 +98,14 @@ function mostraAlternativas(){
 }
 
 function respostaSelecionada(opcaoSelecionada) {
-    const afirmacoes = opcaoSelecionada.afirmação
-    historiaFinal += afirmacoes = " ";
+    const afirmacoes = opcaoSelecionada.afirmacao;
+    historiaFinal += afirmacoes  + " ";
     atual++;
     mostraPergunta();
 }
 
 function motraResultado() {
-    caixaPerguntas.textContent = ".....";
+    caixaPerguntas.textContent = "Em .....";
     textoResultado.textContent = historiaFinal;
     caixaAlternativas.textContent = "";
 }
